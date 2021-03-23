@@ -7,11 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="scr/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="scr/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="scr/css/style.css">
-    <link rel="stylesheet" href="scr/css/carousel.css">
     <title>D2WM</title>
+    <script defer src="scr/js/jquery-3.5.1.js"></script>
+    <script defer src="scr/js/owl.carousel.min.js"></script>
     <script defer src="scr/js/app.js"></script>
-    <script defer src="scr/js/carousel.js"></script>
 
 </head>
 
@@ -33,17 +35,18 @@
 
         <section class="section-info">
             <aside class="infoimg">
-                <div id="slider">
+                <div class="owl-carousel">
 
-                    <img class="active" src="https://via.placeholder.com/500x250" alt="">
+                    <img src="https://via.placeholder.com/500x250" alt="">
                     <img src="https://via.placeholder.com/550x250" alt="">
                     <img src="https://via.placeholder.com/500x250" alt="">
                     <img src="https://via.placeholder.com/500x250" alt="">
 
                 </div>
-                <div class="cont-btn">
-                    <div class="btn-nav left"><i class="fas fa-arrow-left"></i></div>
-                    <div class="btn-nav right"><i class="fas fa-arrow-right"></i></div>
+                <div class="button-control">
+                    <button class="play">play</button>
+                    <button class="stop">stop</button>
+
                 </div>
             </aside>
             <aside class="info-aboutMe">
