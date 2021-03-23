@@ -5,6 +5,10 @@ let urlMeteo =
 let result = document.getElementById("result");
 let urlAPI = "https://my-blog-content-manage.herokuapp.com/Posts";
 
+let affichePresentation = document.getElementById("affichePresentation");
+let urlPres = "https://my-blog-content-manage.herokuapp.com/Presentations";
+
+//Recuperation données API des post strapi
 fetch(urlAPI)
     // renvoi un type json
     .then((res) => res.json())
@@ -29,6 +33,16 @@ fetch(urlMeteo)
                                ${data.main.temp}°<br>
                                ${data.weather[0].description}`;
     });
+
+//Recuperation données API de presentation strapi
+fetch(urlPres)
+    .then((res)=> res.json())
+    .then((datas) =>
+        datas.forEach((data) => {
+            let dataPres = data.Presentation;
+            affichePresentation.innerHTML = dataPres;
+        })
+    );
 
 //configuration owl carousel
 var owl = $(".owl-carousel");

@@ -58,12 +58,15 @@
     justify-content: center;
     margin-top: 2.5%;
 }
-.info-aboutMe {
+.play{
+    margin-right: 10px;
+}
+#affichePresentation {
     display: flex;
     flex-direction: column;
     text-align: center;
     font-size: 1.3em;
-    margin: 15px;
+    margin: 40px 15px ;
 }
 
 .info-aboutMe>h3 {
