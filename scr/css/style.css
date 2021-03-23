@@ -1,0 +1,137 @@
+*,::before,::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "header header header header header header"
+        "section-info section-info section-info section-info section-info section-info"
+        "section-info section-info section-info section-info section-info section-info"
+        "section-blog section-blog section-blog section-blog section-blog section-blog"
+        "section-blog section-blog section-blog section-blog section-blog section-blog"
+        "footer footer footer footer footer footer";
+}
+
+.header {
+    border: 1px solid blue;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "header-logo . ."
+        "header-logo header-nav header-nav";
+    grid-area: header;
+    height: 20vh;
+    background: #000;
+    color: #9f342b;
+}
+
+.header-nav {
+    border: 1px solid red;
+    grid-area: header-nav;
+}
+.header-nav>p{
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+    font-size: 2em;
+}
+.nav>li{
+    list-style: none;
+}
+
+.header-logo {
+    border: 1px solid yellowgreen;
+    grid-area: header-logo;
+    display: flex;
+    flex-direction: row;
+}
+#logo #info-meteo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+#meteo{
+    width: 100%;
+    margin: 50%;
+}
+#logo img{
+    max-width:150px;
+}
+
+.section-info {
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "infoimg infoimg info-aboutMe info-aboutMe"
+        "infoimg infoimg info-aboutMe info-aboutMe";
+    grid-area: section-info;
+    height: 50vh;
+}
+
+.infoimg {
+    border: 1px solid cyan;
+    grid-area: infoimg;
+    max-width: 300px;
+    max-height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-aboutMe {
+    border: 1px solid green;
+    grid-area: info-aboutMe;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.section-blog {
+    border: 1px solid violet;
+    grid-area: section-blog;  
+}
+#result{
+    border: 1px solid darkgreen;
+    display: flex;
+    flex-direction: column;
+}
+#result>li{
+    list-style: none;
+    margin-top: 20px;
+    margin-left: 15%;
+    margin-right: auto;
+    padding-bottom: 1%;
+}
+
+.footer {
+    border: 1px solid lightblue;
+    grid-area: footer;
+    display: flex;
+    flex-direction: row;
+}
+.reseaux, .liens{
+    list-style: none;
+    margin-left: 5%;
+    margin-top: 1%;
+}
+.liens>li{
+    margin-top: 15%;
+    padding-bottom: 50%;
+}
+
+#git{color: #370028;}
+#linked{color: #0e76a8;}
+#facebook{color: #3b5998;}
