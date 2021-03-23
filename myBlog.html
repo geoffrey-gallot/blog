@@ -16,11 +16,8 @@
 </head>
 
 <body>
-    <div class="grid-container">
+    <div class="container">
         <header class="header">
-            <div class="header-nav">
-                <p>Blog d'un developpeur web en formation</p>
-            </div>
             <div class="header-logo">
                 <div id="logo">
                     <img src="asset/Img/webdev_200x200.png" alt="">
@@ -29,14 +26,19 @@
                     <p id="meteo"></p>
                 </div>
             </div>
+            <div class="title">
+                <h1>Blog d'un developpeur web en formation</h1>
+            </div>
         </header>
+
         <section class="section-info">
             <aside class="infoimg">
                 <div id="slider">
-                     <img class="active" src="https://via.placeholder.com/500x250" alt="">
-                     <img src="https://via.placeholder.com/550x250" alt="">
-                     <img src="https://via.placeholder.com/500x250" alt="">
-                     <img src="https://via.placeholder.com/500x250" alt="">
+
+                    <img class="active" src="https://via.placeholder.com/500x250" alt="">
+                    <img src="https://via.placeholder.com/550x250" alt="">
+                    <img src="https://via.placeholder.com/500x250" alt="">
+                    <img src="https://via.placeholder.com/500x250" alt="">
 
                 </div>
                 <div class="cont-btn">
@@ -45,11 +47,13 @@
                 </div>
             </aside>
             <aside class="info-aboutMe">
-                <p>Salut, Bonjour, Bonsoir</p>
-                <p>Que dire... <br>Je suis mis a coder ce blog pour dans un premier temps
-                    m'entrainer au dev mais aussi parler un peu de mon ressentie pendant cet
-                    formation et aussi parler un peu de mes projet perso dans le domaine du
-                    deveveloppement web.</p>
+                <h3>Salut, Bonjour, Bonsoir</h3>
+                <p>Que dire... <br>Quel vaste projet que de ce reconvertir, j'ai coder ce blog
+                    dans un premier temps pour m'entrainer en appliquant tout ce que l on voit pendant
+                    la formation mais aussi parler un peu moi que se que j entreprend comme projet
+                    notament autour de l'Arduino.</p>
+                <p>Pour le moment il est tres simple mais je rajouterai d'autre fonctionnalité par
+                    la suite a mesure que les idées fuse.</p>
                 <p>Pour ce blog j ai choisi d'utiliser strapi pour la gestion de contenu
                     car celui-ci fonctionne sur le principe d'une API et est Open-source, et
                     pour le front aucun framework pour la v1, le but etant d'avoir un pmv
@@ -57,19 +61,22 @@
             </aside>
         </section>
         <section class="section-blog">
-            <div id="result"></div>
+            <ul id="result"></ul>
             <!-- appel API Strapi-->
         </section>
         <footer class="footer">
             <ul class="reseaux">
-                <li><a href="https://github.com/geoffrey-gallot/" id="git" class="link"><i class="fab fa-github fa-3x"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/geo-g-1290121aa/" id="linked" class="link"><i class="fab fa-linkedin fa-3x"></i></a></li>
-                <li><a href="https://www.facebook.com/geoffrey.gallot.9" id="facebook" class="link"><i class="fab fa-facebook fa-3x"></i></a></li>
+                <li><a href="https://github.com/geoffrey-gallot/" id="git" class="link"><i
+                            class="fab fa-github fa-3x"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/geo-g-1290121aa/" id="linked" class="link"><i
+                            class="fab fa-linkedin fa-3x"></i></a></li>
+                <li><a href="https://www.facebook.com/geoffrey.gallot.9" id="facebook" class="link"><i
+                            class="fab fa-facebook fa-3x"></i></a></li>
             </ul>
             <ul class="liens">
                 <li><a href="https://strapi.io/">Strapi</a></li>
                 <li><a href="https://openweathermap.org/">Open Weather</a></li>
-                <li><a href=""></a></li>
+                <li><a href="https://heroku.com">Heroku</a></li>
             </ul>
         </footer>
     </div>
