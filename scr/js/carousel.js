@@ -1,25 +1,7 @@
-// let urlIMG = 'http://localhost:1337/img-sliders';
-
-// fetch(urlIMG)
-//     .then(res => res.json())
-//     .then(pics =>
-//         pics.forEach(pic => {
-
-//             let imgHref = pic.img[0].url;
-//             console.log(imgHref);
-//             let imgSlider = document.createElement('img');
-//             imgSlider.src = imgHref;
-//             slider.append(imgSlider);
-
-//         })
-//     );
-
 var items = document.querySelectorAll('img');
 var nbSlide = items.length;
 const suivant = document.querySelector('.right');
 const precedant = document.querySelector('.left');
-
-
 let count = 0;
 
 function slideSuivante() {
@@ -32,9 +14,8 @@ function slideSuivante() {
     }
 
     items[count].classList.add('active');
-    console.log(count);
+    //console.log(count);
 }
-
 function slidePrecedente() {
     items[count].classList.remove('active');
 
@@ -45,7 +26,18 @@ function slidePrecedente() {
     }
 
     items[count].classList.add('active');
-    console.log(count);
+    //console.log(count);
 }
 precedant.addEventListener('click', slidePrecedente);
 suivant.addEventListener('click', slideSuivante)
+
+function keyPress(e){
+    console.log(e);
+    
+    if(e.keyCode === 37){
+        slidePrecedente();
+    } else if(e.keyCode === 39){
+        slideSuivante();
+    }
+}
+document.addEventListener('keydown', keyPress)

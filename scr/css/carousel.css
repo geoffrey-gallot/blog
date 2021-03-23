@@ -1,4 +1,4 @@
-.infoimg{
+.infoimg {
     max-width: 800px;
     margin: 0 auto;
     padding: 50px;
@@ -8,29 +8,32 @@
     max-width: 100%;
     display: none;
 }
-img.active{
+
+img.active {
     display: block;
     animation: fade 0.8s;
 }
-@keyframes fade{
-    from{
+
+@keyframes fade {
+    from {
         opacity: 0;
     }
-    to{
+
+    to {
         opacity: 1;
-    } 
+    }
 }
 
-.cont-btn{
+.cont-btn {
     width: 100%;
     height: auto;
     border: 1px solid #000;
-    box-shadow: 0 10px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
     display: flex;
     justify-content: center;
 }
 
-.btn-nav{
+.btn-nav {
     font-size: 50px;
     margin: 0 15px;
     cursor: pointer;
