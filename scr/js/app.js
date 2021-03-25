@@ -60,19 +60,3 @@ $(".play").on("click", function () {
 $(".stop").on("click", function () {
   owl.trigger("stop.owl.autoplay");
 });
-
-//pagination des posts
-// $(function(){
-//     $('#result').JPaging({
-//         pageSize: 10,
-//         visiblePageSize: 7
-//     });
-// });
-
-$(function () {
-  $("#result").pagination({
-    items: 50,
-    itemsOnPage: 10,
-    cssStyle: " light-theme ",
-  });
-});
