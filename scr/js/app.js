@@ -60,3 +60,8 @@ $(".play").on("click", function () {
 $(".stop").on("click", function () {
   owl.trigger("stop.owl.autoplay");
 });
+
+var img1 = document.getElementById('carousel01');
+var img2 = document.getElementById('carousel02');
+var img3 = document.getElementById('carousel03');
+var img4 = document.getElementById('carousel04');
