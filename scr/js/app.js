@@ -32,7 +32,7 @@ fetch(urlMeteo)
     meteo.innerHTML = `${data.name}<br>
                                ${data.main.temp}°<br>
                                ${data.weather[0].description}`;
-  });
+  }).catch(err => console.log(`${err}`));
 
 //Recuperation données API de presentation strapi
 fetch(urlPres)
