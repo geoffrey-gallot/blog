@@ -40,12 +40,13 @@
     margin-right: 5%;
     font-family: 'Rock Salt', cursive;
 }
-@media screen and (max-device-width: 500px){
+@media screen and (max-device-width: 900px){
+    .title{margin: 0;}
     .title>h1{font-size: 1em;}
     .header-logo{flex-direction: column;}
     .section-info {flex-direction: column !important;}
     #result{margin-left: 0 !important;}
-    #result>li{max-width: 280px;}
+    #result>li{width: 270px;}
     #result>li:nth-child(even){margin-left: 0 i !important;}
 }
 .section-info {
