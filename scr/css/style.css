@@ -40,7 +40,13 @@
     margin-right: 5%;
     font-family: 'Rock Salt', cursive;
 }
-
+@media screen and (max-device-width: 640px){
+    .title>h1{font-size: 1.2em;}
+    .header-logo{flex-direction: column;}
+    .section-info {flex-direction: column;}
+    #result{margin-left: 0;}
+    #result>li:nth-child(even){transform: translateX(0px);}
+}
 .section-info {
     display: flex;
     flex-direction: row;
@@ -52,7 +58,7 @@
     height: 50vh;
     max-width: 800px;
     max-height: 50vh;
-    margin: 0 auto;
+    margin:  auto;
     padding: 50px;
 }
 .button-control{
@@ -63,16 +69,14 @@
 .play{
     margin-right: 10px;
 }
+.info-aboutMe{
+    margin: 0;
+    padding: 0;
+}
 #affichePresentation {
-    display: flex;
-    flex-direction: column;
     text-align: center;
     font-size: 1.3em;
-    margin: 40px 15px ;
-}
-
-.info-aboutMe>h3 {
-    font-family: 'Rock Salt', cursive;
+    margin: 5% 2%;
 }
 
 .section-blog {
