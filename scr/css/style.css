@@ -52,7 +52,7 @@
 .section-info {
     display: flex;
     flex-direction: row;
-    background: fff1e1;
+    background: #fff1e1;
 }
 
 .infoimg {
@@ -110,7 +110,7 @@
     box-shadow: 10px 10px 10px 0px #d2601a;
 }
 
-.footer {
+#footer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -130,7 +130,7 @@
 
 .liens a {
     font-size: 1.1em;
-    color: #1d3c45;
+    color: #fff1e1;
 }
 
 #git {

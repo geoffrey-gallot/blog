@@ -8,6 +8,12 @@ let urlAPI = "https://my-blog-content-manage.herokuapp.com/Posts";
 let affichePresentation = document.getElementById("affichePresentation");
 let urlPres = "https://my-blog-content-manage.herokuapp.com/Presentations";
 
+//recuperation de la dic carousel avec jQuery
+var owl = $(".owl-carousel");
+
+let footer = document.getElementById('footer');
+// let colorLinks = document.getElementById('liens');
+
 //Recuperation données API des post strapi
 fetch(urlAPI)
   // renvoi un type json
@@ -20,8 +26,16 @@ fetch(urlAPI)
                               ${dateSplit}
                               ${data.Description}`;
       let li = document.createElement("li");
+      li.className = "post";
       result.prepend(li);
       li.innerText = retourPost;
+      var nbPost = document.querySelectorAll(".post").length;
+      console.log(nbPost);
+      if (nbPost % 2 === 0) {
+        footer.setAttribute('style', 'background: #1d3c45');
+      }else{
+        footer.setAttribute('style', 'background: #d2601a'); 
+      }
     })
   );
 
@@ -32,7 +46,8 @@ fetch(urlMeteo)
     meteo.innerHTML = `${data.name}<br>
                                ${data.main.temp}°<br>
                                ${data.weather[0].description}`;
-  }).catch(err => console.log(`${err}`));
+  })
+  .catch((err) => console.log(`${err}`));
 
 //Recuperation données API de presentation strapi
 fetch(urlPres)
@@ -45,7 +60,7 @@ fetch(urlPres)
   );
 
 //configuration owl carousel
-var owl = $(".owl-carousel");
+
 owl.owlCarousel({
   items: 1,
   loop: true,
@@ -61,7 +76,13 @@ $(".stop").on("click", function () {
   owl.trigger("stop.owl.autoplay");
 });
 
-var img1 = document.getElementById('carousel01');
-var img2 = document.getElementById('carousel02');
-var img3 = document.getElementById('carousel03');
-var img4 = document.getElementById('carousel04');
+var img1 = document.getElementById("carousel01");
+var img2 = document.getElementById("carousel02");
+var img3 = document.getElementById("carousel03");
+var img4 = document.getElementById("carousel04");
+
+// function test() {
+//   //recuperation du nombre de post
+//   var nbPost = document.querySelectorAll(".post").length;
+//   console.log(nbPost);
+// }
