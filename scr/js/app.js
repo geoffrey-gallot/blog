@@ -9,7 +9,7 @@ let affichePresentation = document.getElementById("affichePresentation");
 let urlPres = "https://my-blog-content-manage.herokuapp.com/Presentations";
 
 //recuperation de la dic carousel avec jQuery
-var owl = $(".owl-carousel");
+let owl = $(".owl-carousel");
 
 let footer = document.getElementById('footer');
 // let colorLinks = document.getElementById('liens');
@@ -29,7 +29,7 @@ fetch(urlAPI)
       li.className = "post";
       result.prepend(li);
       li.innerText = retourPost;
-      var nbPost = document.querySelectorAll(".post").length;
+      let nbPost = document.querySelectorAll(".post").length;
       console.log(nbPost);
       if (nbPost % 2 === 0) {
         footer.setAttribute('style', 'background: #1d3c45');
@@ -44,8 +44,8 @@ fetch(urlMeteo)
   .then((res) => res.json())
   .then((data) => {
     meteo.innerHTML = `${data.name}<br>
-                               ${data.main.temp}°<br>
-                               ${data.weather[0].description}`;
+                       ${data.main.temp}°<br>
+                       ${data.weather[0].description}`;
   })
   .catch((err) => console.log(`${err}`));
 
@@ -70,7 +70,7 @@ owl.owlCarousel({
   autoplayHoverPause: true,
 });
 $(".play").on("click", function () {
-  owl.trigger("play.owl.autoplay", [1000]);
+  owl.trigger("play.owl.autoplay", [2000]);
 });
 $(".stop").on("click", function () {
   owl.trigger("stop.owl.autoplay");
@@ -80,9 +80,3 @@ var img1 = document.getElementById("carousel01");
 var img2 = document.getElementById("carousel02");
 var img3 = document.getElementById("carousel03");
 var img4 = document.getElementById("carousel04");
-
-// function test() {
-//   //recuperation du nombre de post
-//   var nbPost = document.querySelectorAll(".post").length;
-//   console.log(nbPost);
-// }
