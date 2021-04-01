@@ -11,8 +11,6 @@ let urlPres = "https://my-blog-content-manage.herokuapp.com/Presentations";
 //recuperation de la dic carousel avec jQuery
 let owl = $(".owl-carousel");
 
-let chargement = document.querySelector('.chargement-icone');
-
 let footer = document.getElementById('footer');
 // let colorLinks = document.getElementById('liens');
 
@@ -39,7 +37,6 @@ fetch(urlAPI)
         footer.setAttribute('style', 'background: #d2601a'); 
       }
     })
-    chargement.classList.add('disparition');
   );
 
 //recuperation données API open weather
