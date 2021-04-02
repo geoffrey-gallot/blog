@@ -31,13 +31,14 @@ fetch(urlAPI)
       li.innerText = retourPost;
       let nbPost = document.querySelectorAll(".post").length;
       console.log(nbPost);
+      ScrollReveal().reveal('.result>li');
       if (nbPost % 2 === 0) {
         footer.setAttribute('style', 'background: #1d3c45');
       }else{
         footer.setAttribute('style', 'background: #d2601a'); 
       }
     })
-    ScrollReveal().reveal('.result li');
+    // ScrollReveal().reveal('.result li');
   );
 
 //recuperation données API open weather
