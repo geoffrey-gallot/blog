@@ -11,6 +11,12 @@ let urlPres = "https://my-blog-content-manage.herokuapp.com/Presentations";
 //recuperation de la dic carousel avec jQuery
 let owl = $(".owl-carousel");
 
+//relatif a scrollreveal
+const sr = ScrollReveal({
+  duration: 1000,
+  reset: true
+});
+
 let footer = document.getElementById('footer');
 // let colorLinks = document.getElementById('liens');
 
@@ -31,16 +37,26 @@ fetch(urlAPI)
       li.innerText = retourPost;
       let nbPost = document.querySelectorAll(".post").length;
       console.log(nbPost);
-      ScrollReveal().reveal('.result>li');
       if (nbPost % 2 === 0) {
         footer.setAttribute('style', 'background: #1d3c45');
       }else{
         footer.setAttribute('style', 'background: #d2601a'); 
       }
+      //animation au scroll des posts
+      sr.reveal("#result li",{
+          delay: 500,
+          reset: false,
+        },250);
     })
-    // ScrollReveal().reveal('.result li');
   );
-
+//animation des element au scroll
+sr.reveal('#logo')
+sr.reveal('h1',{
+  delay: 500
+});
+sr.reveal('#meteo',{
+  delay:1000
+})
 //recuperation données API open weather
 fetch(urlMeteo)
   .then((res) => res.json())
