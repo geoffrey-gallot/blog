@@ -126,7 +126,9 @@
 .reseaux,
 .liens {
     list-style: none;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .liens a {

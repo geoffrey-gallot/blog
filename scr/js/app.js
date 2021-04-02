@@ -57,6 +57,10 @@ sr.reveal('h1',{
 sr.reveal('#meteo',{
   delay:1000
 })
+sr.reveal('.liens li',{
+  delay:500
+},250)
+sr.reveal('.reseaux li')
 //recuperation données API open weather
 fetch(urlMeteo)
   .then((res) => res.json())
@@ -94,7 +98,7 @@ $(".stop").on("click", function () {
   owl.trigger("stop.owl.autoplay");
 });
 
-var img1 = document.getElementById("carousel01");
-var img2 = document.getElementById("carousel02");
-var img3 = document.getElementById("carousel03");
-var img4 = document.getElementById("carousel04");
+// var img1 = document.getElementById("carousel01");
+// var img2 = document.getElementById("carousel02");
+// var img3 = document.getElementById("carousel03");
+// var img4 = document.getElementById("carousel04");
