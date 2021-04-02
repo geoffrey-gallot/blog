@@ -23,8 +23,8 @@ fetch(urlAPI)
     datas.forEach((data) => {
       let dateSplit = data.published_at.split("T")[0];
       let retourPost = `${data.Title}
-                              ${dateSplit}
-                              ${data.Description}`;
+                        ${dateSplit}
+                        ${data.Description}`;
       let li = document.createElement("li");
       li.className = "post";
       result.prepend(li);
@@ -37,6 +37,7 @@ fetch(urlAPI)
         footer.setAttribute('style', 'background: #d2601a'); 
       }
     })
+    ScrollReveal().reveal('.result li');
   );
 
 //recuperation données API open weather
